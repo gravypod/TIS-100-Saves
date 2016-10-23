@@ -1,0 +1,55 @@
+@0
+
+
+@1
+MOV UP, DOWN
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+MOV UP, RIGHT
+
+@6
+MOV LEFT, DOWN
+
+@7
+
+
+@8
+MOV 30, ACC
+
+LOOP:
+  SAV
+  SUB 30
+  NEG
+  MOV ACC, RIGHT
+  SWP
+  SUB 1
+  JGZ LOOP
+
+@9
+MOV UP, ACC
+
+MOV ACC, RIGHT
+MOV LEFT, DOWN
+MOV RIGHT, ACC
+
+LOOP: SUB 1
+ MOV RIGHT, DOWN
+ JGZ LOOP
+
+@10
+MOV 17, ACC
+SUB LEFT
+
+LOOP:
+    MOV ACC, LEFT
+    SUB 1
+    JGZ LOOP

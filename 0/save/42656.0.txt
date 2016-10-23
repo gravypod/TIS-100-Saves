@@ -1,0 +1,40 @@
+@0
+
+
+@1
+0: SAV
+MOV UP, ACC
+JEZ POP
+MOV ACC, RIGHT
+
+SWP
+ADD 1
+JMP 0
+
+POP: SWP
+JEZ 2
+1: MOV RIGHT,DOWN
+SUB 1
+JGZ 1
+2: MOV 0, DOWN
+
+@2
+
+
+@3
+
+
+@4
+MOV UP, RIGHT
+
+@5
+MOV LEFT, DOWN
+
+@6
+
+
+@7
+MOV UP, DOWN
+
+@8
+

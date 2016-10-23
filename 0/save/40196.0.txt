@@ -1,0 +1,52 @@
+@0
+
+
+@1
+MOV UP, RIGHT
+
+@2
+SAV
+MOV LEFT, ACC
+
+JEZ ZERO
+
+MOV 0, ACC
+JMP END
+
+ZERO: SWP
+ADD 1
+
+END: MOV ACC,DOWN
+
+@3
+
+
+@4
+
+
+@5
+MOV UP, ACC
+SUB 3
+
+JLZ SMALL
+MOV 1, DOWN
+JMP END
+
+SMALL: MOV 0, DOWN
+
+END:
+
+@6
+
+
+@7
+
+
+@8
+
+
+@9
+MOV UP, DOWN
+
+@10
+
