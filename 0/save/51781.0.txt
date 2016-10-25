@@ -1,32 +1,94 @@
 @0
-
+RST: MOV 0 ACC
+     SAV
+LOOP: MOV ACC DOWN
+      SAV
+      SUB 30
+      JGZ RST
+      SWP
+      ADD 2
+      JMP LOOP
 
 @1
 
 
 @2
-
+RST: MOV 1 ACC
+     SAV
+LOOP: MOV ACC DOWN
+      SAV
+      SUB 30
+      JGZ RST
+      SWP
+      ADD 2
+      JMP LOOP
 
 @3
 
 
 @4
+MOV DOWN ACC
+SAV
+MOV 30 ACC
 
+SEND:SWP
+     MOV UP RIGHT
+     MOV ACC RIGHT
+     MOV 3 RIGHT
+SWP
+SUB 1
+JGZ SEND
 
 @5
-
+MOV LEFT DOWN
+MOV LEFT DOWN
+MOV LEFT DOWN
+MOV RIGHT DOWN
+MOV RIGHT DOWN
+MOV RIGHT DOWN
 
 @6
+MOV DOWN ACC
+SAV
+MOV 30 ACC
 
+SEND:SWP
+     MOV UP LEFT
+     MOV ACC LEFT
+     MOV 3 LEFT
+SWP
+SUB 1
+JGZ SEND
 
 @7
 
 
 @8
-
+DONE: MOV 0 ACC
+      SAV
+LOOP: SWP
+      MOV ACC UP
+      SUB 18
+      SWP
+      ADD 2
+      SAV
+      JEZ DONE
+      JMP LOOP
 
 @9
-
+MOV UP DOWN
+MOV UP DOWN
+MOV UP DOWN
+MOV -1 DOWN
 
 @10
-
+DONE: MOV 1 ACC
+      SAV
+LOOP: SWP
+      MOV ACC UP
+      SUB 18
+      SWP
+      ADD 2
+      SAV
+      JEZ DONE
+      JMP LOOP
