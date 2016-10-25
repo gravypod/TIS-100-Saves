@@ -1,0 +1,54 @@
+@0
+
+
+@1
+RST: MOV UP ACC
+LOOP:SUB RIGHT
+     JLZ SEND
+     MOV 1 RIGHT
+     SWP
+     ADD 1
+     SWP
+     JMP LOOP
+SEND:MOV ACC RIGHT
+     SWP
+     MOV ACC DOWN
+     MOV 0 ACC
+     SWP
+     MOV 0 ACC
+
+@2
+RST: MOV UP ACC
+LOOP:MOV ACC LEFT
+     SWP
+     MOV LEFT ACC
+     JEZ SEND
+     JLZ SEND
+     SWP
+     JMP LOOP
+SEND:MOV ACC RIGHT
+     SWP
+     MOV ACC RIGHT
+    MOV RIGHT DOWN
+     MOV 0 ACC
+     SAV
+
+@3
+MOV LEFT ACC
+ADD LEFT
+MOV ACC LEFT
+
+@4
+MOV UP DOWN
+
+@5
+MOV UP DOWN
+
+@6
+
+
+@7
+MOV UP DOWN
+
+@8
+MOV UP DOWN
