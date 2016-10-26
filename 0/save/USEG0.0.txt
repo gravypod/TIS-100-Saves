@@ -2,7 +2,8 @@
 
 
 @1
-
+##TEST
+MOV UP DOWN
 
 @2
 
@@ -14,7 +15,7 @@
 
 
 @5
-
+MOV UP DOWN
 
 @6
 
@@ -26,10 +27,11 @@
 
 
 @9
-
+MOV UP RIGHT
 
 @10
-
+##SEND
+MOV LEFT DOWN
 
 @11
 
