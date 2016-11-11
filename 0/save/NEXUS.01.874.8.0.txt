@@ -1,0 +1,42 @@
+@0
+
+
+@1
+RST: MOV UP ACC
+LOO: JLZ RST
+     MOV ACC RIGHT
+     MOV ACC RIGHT
+     SUB 1
+     JMP LOO
+
+@2
+MOV 0 ACC
+SAV
+LOO: SWP
+     ADD LEFT
+     SAV
+     MOV LEFT ACC
+     JNZ LOO
+SWP
+MOV ACC DOWN
+
+@3
+
+
+@4
+
+
+@5
+MOV UP DOWN
+
+@6
+
+
+@7
+
+
+@8
+MOV RIGHT DOWN
+
+@9
+MOV UP LEFT
