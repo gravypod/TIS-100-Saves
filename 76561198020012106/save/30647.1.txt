@@ -1,7 +1,5 @@
 @0
-MOV UP ACC
-SAV
-LOO:
+
 
 @1
 
